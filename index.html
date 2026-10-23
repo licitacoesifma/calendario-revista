@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cronograma da Dispensa de Licitação — Revista Saber IFMA</title>
+<meta name="description" content="Cronograma da fase de seleção do fornecedor — dispensa de licitação, art. 75, II, da Lei 14.133/2021. Processo 23249.044627.2026-11, UASG 158128. CLC/PROAD — Reitoria/IFMA.">
+<meta name="theme-color" content="#2f9e41">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --verde:#2f9e41;
+    --vermelho:#cd191e;
+    --azul:#2d2d87;
+    --preto:#000000;
+
+    --verde-claro:#e9f5ec;
+    --verde-medio:#7cc189;
+    --azul-claro:#e9e9f4;
+    --azul-medio:#8585bd;
+    --coral:#c3573f;
+    --coral-claro:#f8ece8;
+    --coral-medio:#dda08e;
+
+    --txt:#333331;
+    --txt-2:#5c5c59;
+    --txt-3:#8a8a86;
+    --linha:#e2e1dd;
+    --linha-forte:#c9c8c3;
+    --papel:#ffffff;
+    --fundo:#f5f5f3;
+    --off:#eeeeea;
+
+    --label-w:184px;
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--fundo);
+    color:var(--txt);
+    font-family:"Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    font-size:15px;
+    font-weight:400;
+    line-height:1.72;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .faixa{height:6px;background:var(--verde)}
+  .faixa-fina{height:2px;background:var(--verde);opacity:.45}
+
+  .folha{
+    max-width:980px;
+    margin:0 auto;
+    background:var(--papel);
+    padding:0 56px 56px;
+    border-left:1px solid var(--linha);
+    border-right:1px solid var(--linha);
+    min-height:100vh;
+  }
+
+  /* Cabeçalho — área de proteção da marca preservada */
+  .topo{display:flex; align-items:flex-end; justify-content:space-between; gap:32px; padding:36px 0 22px; flex-wrap:wrap}
+  .marca{display:flex; align-items:center; min-height:48px}
+  .marca img{height:48px; width:auto; display:block}
+  .marca-texto{line-height:1.25}
+  .marca-texto strong{display:block; font-weight:700; font-size:14px; letter-spacing:.01em; color:var(--txt)}
+  .marca-texto span{display:block; font-weight:400; font-size:13px; color:var(--txt-2)}
+  .unidade{text-align:right; font-size:12px; color:var(--txt-3); line-height:1.6}
+  .unidade b{display:block; font-weight:600; color:var(--txt-2); font-size:12px; letter-spacing:.02em; text-transform:uppercase}
+
+  .titulo{padding:30px 0 6px; border-top:1px solid var(--linha)}
+  .titulo .etiqueta{
+    display:inline-block; font-size:11px; font-weight:700; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--verde); margin-bottom:10px;
+  }
+  h1{font-size:30px; font-weight:700; line-height:1.22; margin:0 0 12px; color:var(--txt); letter-spacing:-.01em}
+  .chamada{font-size:16px; font-weight:300; color:var(--txt-2); margin:0; line-height:1.68; text-align:justify}
+
+  .meta{display:flex; flex-wrap:wrap; gap:0 40px; margin:26px 0 0; padding:18px 0; border-top:1px solid var(--linha); border-bottom:1px solid var(--linha)}
+  .meta div{min-width:150px}
+  .meta dt{font-size:10.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--txt-3); margin:0 0 2px}
+  .meta dd{margin:0; font-size:14px; font-weight:600; color:var(--txt)}
+
+  h2{font-size:19px; font-weight:700; color:var(--verde); margin:46px 0 4px; letter-spacing:-.005em}
+  h2 + .sub2{font-size:14px; font-weight:300; color:var(--txt-2); margin:0 0 18px}
+
+  /* Gráfico */
+  .quadro{border:1px solid var(--linha); background:var(--papel); padding:24px 0 18px}
+  .rolagem{padding:0 24px}
+  .grafico{min-width:0}
+
+  .linha{display:grid; grid-template-columns:var(--label-w) 1fr; align-items:center}
+  .rotulo{font-size:12.5px; font-weight:600; color:var(--txt-2); padding-right:16px; text-align:right; letter-spacing:.005em}
+  .trilha{display:grid; grid-template-columns:repeat(20,1fr); position:relative; min-width:0}
+  .cel{grid-row:1; height:100%; border-left:1px solid var(--linha)}
+  .cel:last-child{border-right:1px solid var(--linha)}
+  .cel.nao-util{background:var(--off)}
+  .cel.hoje{background:rgba(205,25,30,.05); border-left:2px solid var(--vermelho)}
+  .cel.mes{border-left:1px solid var(--linha-forte)}
+
+  .meses .m{grid-row:1; font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--txt-2); text-align:center; padding-bottom:6px}
+  .m.nov{border-left:1px solid var(--linha-forte)}
+
+  .dias .trilha{align-items:end}
+  .dias .d{grid-row:1; text-align:center; padding:2px 0 7px}
+  .dias .sem{display:block; font-size:9.5px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--txt-3)}
+  .dias .num{display:block; font-size:12.5px; font-weight:600; color:var(--txt-2)}
+  .dias .d.nao-util .num,.dias .d.nao-util .sem{color:#aaaaa5}
+  .dias .d.hoje{position:relative; background:rgba(205,25,30,.05); border-left:2px solid var(--vermelho)}
+  .dias .d.hoje .num{color:var(--vermelho); font-weight:700}
+  .dias .d.hoje .sem{color:var(--vermelho)}
+  .dias .d.hoje::after{
+    content:"hoje"; position:absolute; left:50%; bottom:-6px; transform:translateX(-50%);
+    background:var(--vermelho); color:#fff; font-size:8.5px; font-weight:700;
+    letter-spacing:.08em; text-transform:uppercase; padding:1px 5px; border-radius:2px; z-index:3;
+  }
+  .dias{padding-bottom:4px}
+
+  .etapa .trilha .cel:last-child{border-right:2px solid var(--verde); background:rgba(47,158,65,.05)}
+  .dias .d:last-child{position:relative; border-right:2px solid var(--verde); background:rgba(47,158,65,.05)}
+  .dias .d:last-child .num{color:var(--verde); font-weight:700}
+  .dias .d:last-child .sem{color:var(--verde)}
+  .dias .d:last-child::after{
+    content:"fim"; position:absolute; left:50%; bottom:-6px; transform:translateX(-50%);
+    background:var(--verde); color:#fff; font-size:8.5px; font-weight:700;
+    letter-spacing:.08em; text-transform:uppercase; padding:1px 5px; border-radius:2px; z-index:3;
+  }
+
+  .etapa{height:42px}
+  .etapa .trilha{height:42px}
+  .barra{
+    grid-row:1; align-self:center; height:27px; border-radius:3px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:11.5px; font-weight:600; letter-spacing:.01em;
+    position:relative; z-index:2; border:1px solid; white-space:nowrap; overflow:hidden;
+  }
+  .barra.azul{background:var(--azul-claro); border-color:var(--azul); color:var(--azul)}
+  .barra.verde{background:var(--verde-claro); border-color:var(--verde); color:#227231}
+  .barra.coral{background:var(--coral-claro); border-color:var(--coral); color:#9a4130}
+  .barra.fim{background:var(--verde); border-color:var(--verde); color:#fff}
+  .marco{grid-row:1; align-self:center; justify-self:center; width:15px; height:15px;
+    background:var(--vermelho); transform:rotate(45deg); border-radius:2px; z-index:2}
+
+  .legenda{display:flex; flex-wrap:wrap; gap:9px 26px; padding:18px 24px 0; margin-top:14px; border-top:1px solid var(--linha); font-size:12px; color:var(--txt-2)}
+  .legenda span{display:inline-flex; align-items:center; gap:8px}
+  .am{width:12px; height:12px; border-radius:2px; border:1px solid}
+  .am.azul{background:var(--azul-claro); border-color:var(--azul)}
+  .am.verde{background:var(--verde-claro); border-color:var(--verde)}
+  .am.coral{background:var(--coral-claro); border-color:var(--coral)}
+  .am.off{background:var(--off); border-color:var(--linha-forte)}
+  .losango{width:11px; height:11px; background:var(--vermelho); transform:rotate(45deg); border-radius:2px}
+  .hoje-am{width:2px; height:13px; background:var(--vermelho); flex:0 0 2px}
+  .fim-am{width:2px; height:13px; background:var(--verde); flex:0 0 2px}
+  .dica{font-size:11.5px; color:var(--txt-3); padding:12px 24px 0; font-style:italic}
+
+  /* Tabela */
+  table{width:100%; border-collapse:collapse; font-size:13.5px}
+  caption{caption-side:bottom; text-align:left; font-size:11.5px; color:var(--txt-3); padding-top:10px}
+  thead th{
+    background:var(--verde); color:#fff; font-weight:600; font-size:11px;
+    letter-spacing:.07em; text-transform:uppercase; text-align:left; padding:10px 14px; border:none;
+  }
+  tbody td{padding:11px 14px; border-bottom:1px solid var(--linha); vertical-align:top; color:var(--txt-2)}
+  tbody tr:nth-child(odd) td{background:#fafaf8}
+  tbody td:first-child{color:var(--txt); font-weight:600}
+  td.quando{white-space:nowrap; font-variant-numeric:tabular-nums}
+  td.base{font-size:12.5px; color:var(--txt-3)}
+
+  .notas{margin:0; padding:0; list-style:none}
+  .notas li{position:relative; padding-left:20px; margin-bottom:12px; font-size:14px; color:var(--txt-2)}
+  .notas li::before{content:""; position:absolute; left:0; top:.62em; width:7px; height:7px; background:var(--verde); border-radius:1px}
+  .notas b{font-weight:600; color:var(--txt)}
+
+  .destaque{border-left:3px solid var(--vermelho); background:#fdf3f3; padding:16px 20px; margin:24px 0 0; font-size:14px; color:var(--txt-2)}
+  .destaque b{color:var(--txt); font-weight:600}
+
+  footer{margin-top:52px; padding-top:22px; border-top:1px solid var(--linha); display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center}
+  footer .orgao{font-size:12px; color:var(--txt-2); line-height:1.6}
+  footer .orgao strong{display:block; font-weight:600; color:var(--txt)}
+  footer .data{font-size:11.5px; color:var(--txt-3)}
+
+  @media (max-width:900px){
+    :root{--label-w:150px}
+    .rotulo{font-size:11.5px; padding-right:12px}
+    .dias .sem{font-size:9px}
+    .dias .num{font-size:11.5px}
+    .barra{font-size:10.5px}
+  }
+
+  @media (max-width:760px){
+    .folha{padding:0 20px 40px; border:none}
+    h1{font-size:23px}
+    .chamada{font-size:15px}
+    .unidade{text-align:left}
+    .rolagem{padding:0 14px}
+    .legenda{padding-left:14px; padding-right:14px}
+
+    .linha{grid-template-columns:1fr}
+    .meses .rotulo,.dias .rotulo{display:none}
+    .rotulo{text-align:left; padding:0 0 3px; font-size:11.5px}
+    .etapa{height:auto; margin-bottom:12px}
+    .etapa .trilha{height:34px}
+    .barra{height:24px}
+    .dias .sem{display:none}
+    .dias .num{font-size:10.5px}
+    .meses .m{font-size:10px; letter-spacing:.05em}
+  }
+
+  @media (max-width:420px){
+    .folha{padding:0 12px 36px}
+    .rolagem{padding:0 8px}
+    .legenda{padding-left:8px; padding-right:8px; gap:8px 16px; font-size:11.5px}
+    .dias .num{font-size:9.5px}
+    .barra{font-size:9.5px}
+  }
+
+  @media print{
+    body{background:#fff}
+    .folha{border:none; max-width:none; padding:0 12mm 12mm; min-height:0}
+    .rolagem{padding:0}
+    h2{break-after:avoid}
+    .quadro,table{break-inside:avoid}
+    a[href]::after{content:""}
+  }
+</style>
+</head>
+<body>
+
+<div class="faixa"></div>
+<div class="faixa-fina"></div>
+
+<div class="folha">
+
+  <header class="topo">
+    <div class="marca">
+      <img src="assets/ifma_comp_horz_esp-cor.png"
+           alt="Instituto Federal de Educação, Ciência e Tecnologia do Maranhão"
+           onerror="this.remove();document.getElementById('marcaTexto').hidden=false">
+      <div class="marca-texto" id="marcaTexto" hidden>
+        <strong>Instituto Federal do Maranhão</strong>
+        <span>Educação, Ciência e Tecnologia</span>
+      </div>
+    </div>
+    <div class="unidade">
+      <b>Reitoria</b>
+      Pró-Reitoria de Administração — PROAD<br>
+      Coordenação de Licitações e Contratos — CLC
+    </div>
+  </header>
+
+  <section class="titulo">
+    <span class="etiqueta">Fase de seleção do fornecedor</span>
+    <h1>Cronograma da dispensa de licitação</h1>
+    <p class="chamada">Contratação de serviço gráfico para impressão da Revista Saber IFMA, edição nº 04/2026. Etapas de 18 de outubro a 6 de novembro de 2026, da elaboração do Termo de Referência à emissão da nota de empenho.</p>
+  </section>
+
+  <dl class="meta">
+    <div><dt>Processo</dt><dd>23249.044627.2026-11</dd></div>
+    <div><dt>UASG</dt><dd>158128</dd></div>
+    <div><dt>Modalidade</dt><dd>Contratação direta</dd></div>
+    <div><dt>Fundamento</dt><dd>Art. 75, II, Lei 14.133/2021</dd></div>
+    <div><dt>Critério</dt><dd>Menor preço total</dd></div>
+  </dl>
+
+  <h2>Linha do tempo</h2>
+  <p class="sub2">Dias não úteis sombreados.</p>
+
+  <div class="quadro">
+    <div class="rolagem">
+      <div class="grafico">
+
+        <div class="linha meses">
+          <div class="rotulo"></div>
+          <div class="trilha">
+            <div class="m" style="grid-column:1 / span 14">outubro de 2026</div>
+            <div class="m nov" style="grid-column:15 / span 6">novembro</div>
+          </div>
+        </div>
+
+        <div class="linha dias">
+          <div class="rotulo"></div>
+          <div class="trilha">
+            <div class="d nao-util"><span class="sem">dom</span><span class="num">18</span></div>
+            <div class="d"><span class="sem">seg</span><span class="num">19</span></div>
+            <div class="d"><span class="sem">ter</span><span class="num">20</span></div>
+            <div class="d"><span class="sem">qua</span><span class="num">21</span></div>
+            <div class="d"><span class="sem">qui</span><span class="num">22</span></div>
+            <div class="d hoje"><span class="sem">sex</span><span class="num">23</span></div>
+            <div class="d nao-util"><span class="sem">sáb</span><span class="num">24</span></div>
+            <div class="d nao-util"><span class="sem">dom</span><span class="num">25</span></div>
+            <div class="d"><span class="sem">seg</span><span class="num">26</span></div>
+            <div class="d"><span class="sem">ter</span><span class="num">27</span></div>
+            <div class="d"><span class="sem">qua</span><span class="num">28</span></div>
+            <div class="d"><span class="sem">qui</span><span class="num">29</span></div>
+            <div class="d"><span class="sem">sex</span><span class="num">30</span></div>
+            <div class="d nao-util"><span class="sem">sáb</span><span class="num">31</span></div>
+            <div class="d nao-util"><span class="sem">dom</span><span class="num">1</span></div>
+            <div class="d nao-util"><span class="sem">seg</span><span class="num">2</span></div>
+            <div class="d"><span class="sem">ter</span><span class="num">3</span></div>
+            <div class="d"><span class="sem">qua</span><span class="num">4</span></div>
+            <div class="d"><span class="sem">qui</span><span class="num">5</span></div>
+            <div class="d"><span class="sem">sex</span><span class="num">6</span></div>
+          </div>
+        </div>
+
+        <div class="linha etapa">
+          <div class="rotulo">Elaboração do TR</div>
+          <div class="trilha">
+            <div class="cel nao-util"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel hoje"></div><div class="cel nao-util"></div><div class="cel nao-util"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel nao-util"></div><div class="cel nao-util mes"></div><div class="cel nao-util"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div>
+            <div class="barra azul" style="grid-column:1 / span 10">10 dias</div>
+          </div>
+        </div>
+
+        <div class="linha etapa">
+          <div class="rotulo">Pesquisa de preços</div>
+          <div class="trilha">
+            <div class="cel nao-util"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel hoje"></div><div class="cel nao-util"></div><div class="cel nao-util"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel nao-util"></div><div class="cel nao-util mes"></div><div class="cel nao-util"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div>
+            <div class="barra verde" style="grid-column:2 / span 8">8 dias</div>
+          </div>
+        </div>
+
+        <div class="linha etapa">
+          <div class="rotulo">Habilitação e atestados</div>
+          <div class="trilha">
+            <div class="cel nao-util"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel hoje"></div><div class="cel nao-util"></div><div class="cel nao-util"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel nao-util"></div><div class="cel nao-util mes"></div><div class="cel nao-util"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div>
+            <div class="barra coral" style="grid-column:18 / span 2">2 dias</div>
+          </div>
+        </div>
+
+        <div class="linha etapa">
+          <div class="rotulo">Homologação e empenho</div>
+          <div class="trilha">
+            <div class="cel nao-util"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel hoje"></div><div class="cel nao-util"></div><div class="cel nao-util"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel nao-util"></div><div class="cel nao-util mes"></div><div class="cel nao-util"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div><div class="cel"></div>
+            <div class="barra fim" style="grid-column:20 / span 1" title="Conclusão do processo — 6 de novembro"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="legenda">
+      <span><i class="am verde"></i>Planejamento e preços</span>
+      <span><i class="am azul"></i>Instrução processual</span>
+      <span><i class="am coral"></i>Seleção e contratação</span>
+      <span><i class="am off"></i>Dia não útil</span>
+      <span><i class="hoje-am"></i>Data de hoje</span>
+      <span><i class="fim-am"></i>Conclusão do processo</span>
+    </div>
+  </div>
+
+  <h2>Quadro de datas</h2>
+  <p class="sub2">Etapas, períodos e fundamento normativo de cada ato do processo.</p>
+
+  <table>
+    <thead>
+      <tr><th scope="col">Etapa</th><th scope="col">Período</th><th scope="col">Fundamento</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Elaboração do Termo de Referência</td>
+        <td class="quando">18 a 27/10</td>
+        <td class="base">Art. 6º, XXIII, da Lei 14.133/2021</td>
+      </tr>
+      <tr>
+        <td>Pesquisa de preços e mapa comparativo</td>
+        <td class="quando">19 a 26/10</td>
+        <td class="base">Art. 23 e IN SEGES/ME 65/2021</td>
+      </tr>
+      <tr>
+        <td>Habilitação do melhor classificado: SICAF, atestado de capacidade técnica e consulta a sanções</td>
+        <td class="quando">04 e 05/11</td>
+        <td class="base">Arts. 62 a 68 e art. 14 da Lei 14.133/2021</td>
+      </tr>
+      <tr>
+        <td>Homologação, divulgação no PNCP e emissão da nota de empenho</td>
+        <td class="quando">06/11</td>
+        <td class="base">Arts. 94, 95, I, e 72, parágrafo único</td>
+      </tr>
+    </tbody>
+    <caption>Prazos em dias corridos, salvo quando indicado como dias úteis.</caption>
+  </table>
+
+  <h2>Observações</h2>
+  <p class="sub2">Pontos de atenção na contagem dos prazos e na ordem dos atos.</p>
+
+  <ul class="notas">
+    <li><b>Momento da habilitação.</b> A verificação dos atestados de capacidade técnica ocorre após a verificação pelo mapa de apuração de preços do melhor preço para a administração.</li>
+    <li><b>Limite do cronograma.</b> O prazo de execução contratual — envio da arte-final, prova, impressão e entrega — é posterior ao empenho e não integra esta linha do tempo.</li>
+  </ul>
+
+  <footer>
+    <div class="orgao">
+      <strong>Coordenação de Licitações e Contratos — CLC/PROAD</strong>
+      Instituto Federal de Educação, Ciência e Tecnologia do Maranhão<br>
+      A Reitoria do IFMA (Instituto Federal do Maranhão) está localizada na Avenida Colares Moreira, nº 477, no bairro Renascença (ou Renascença II), em São Luís - MA
+    </div>
+    <div class="data">Agente de contratação responsável: Kristiano Fernandes Plácido</div>
+  </footer>
+
+</div>
+
+<div class="faixa-fina"></div>
+<div class="faixa"></div>
+
+</body>
+</html>
